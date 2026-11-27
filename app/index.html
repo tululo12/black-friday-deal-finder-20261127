@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DealLens — Real Black Friday Deals 2026, Checked Today</title>
+<meta name="description" content="30 real Black Friday and Cyber Monday deals, each price-checked on 27 November 2026, with a verdict on whether the discount is genuine.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">◉</span>
+      <span class="brand-name">DealLens</span>
+      <span class="brand-tag">Black Friday 2026</span>
+    </div>
+    <p class="topbar-date">Prices checked <strong>27 Nov 2026</strong> · Sale ends 30 Nov (Cyber Monday)</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>Real Black Friday deals.<br>Checked today. No fake discounts.</h1>
+    <p class="hero-sub">Every price below was checked on 27 November 2026 against a retailer
+    page or a published price check. Each card says <em>why</em> the deal is real —
+    and calls out the ones that are only a small cut dressed up as a bargain.</p>
+    <dl class="stats" id="stats">
+      <div><dt>Deals checked</dt><dd id="stat-deals">–</dd></div>
+      <div><dt>Total you could save</dt><dd id="stat-save">–</dd></div>
+      <div><dt>Average discount</dt><dd id="stat-avg">–</dd></div>
+      <div><dt>Lowest price ever</dt><dd id="stat-lowest">–</dd></div>
+    </dl>
+  </section>
+
+  <section class="picks" aria-labelledby="picks-h">
+    <h2 id="picks-h">Today’s three sharpest deals</h2>
+    <div class="pick-grid" id="picks"></div>
+  </section>
+
+  <section class="finder" aria-labelledby="finder-h">
+    <h2 id="finder-h">Find your deal</h2>
+    <div class="controls">
+      <label class="ctl-search">Search
+        <input id="q" type="search" placeholder="Try “airpods”, “OLED”, “lego”…" autocomplete="off">
+      </label>
+      <label>Store
+        <select id="store">
+          <option value="">All stores</option>
+          <option>Amazon</option>
+          <option>Best Buy</option>
+          <option>Walmart</option>
+        </select>
+      </label>
+      <label>Min. discount
+        <select id="mindisc">
+          <option value="0">Any discount</option>
+          <option value="20">20% or more</option>
+          <option value="40">40% or more</option>
+          <option value="50">50% or more</option>
+        </select>
+      </label>
+      <label>Sort by
+        <select id="sort">
+          <option value="pct">Biggest discount %</option>
+          <option value="save">Biggest saving $</option>
+          <option value="price">Lowest price</option>
+          <option value="name">Name A–Z</option>
+        </select>
+      </label>
+      <label class="ctl-check"><input id="lowest" type="checkbox"> Lowest-ever prices only</label>
+      <button id="reset" type="button">Reset</button>
+    </div>
+    <div class="cats" id="cats" role="group" aria-label="Category"></div>
+    <p class="count" id="count" aria-live="polite"></p>
+    <div class="grid" id="grid"></div>
+    <p class="empty" id="empty" hidden>No deals match. Try clearing a filter — the
+    <button id="empty-reset" type="button">reset button</button> brings all 30 back.</p>
+  </section>
+
+  <section class="method" aria-labelledby="method-h">
+    <h2 id="method-h">How we check a deal — and how to spot a fake one</h2>
+    <ol class="steps">
+      <li><strong>Find it at the store.</strong> The price must be live on the retailer’s
+      own page, or in a price check published 20–27 Nov 2026 that names the store.</li>
+      <li><strong>Compare it with the usual price.</strong> “Usual” is the retailer’s
+      list price or the price the product sold at before the sale — never a number
+      invented for the sale.</li>
+      <li><strong>Ask if it is really a deal.</strong> A 9% cut on a Nintendo bundle
+      counts for more than a 50% cut off an inflated list price, because Nintendo
+      almost never discounts. The badge on each card says which it is.</li>
+      <li><strong>Show the receipt.</strong> Every card names its source and the day
+      it was checked, so you can verify it yourself before you buy.</li>
+    </ol>
+    <div class="warn">
+      <h3>The catch, honestly</h3>
+      <p>Some retailers raise list prices before a sale, so a big “% off” can be
+      mostly theatre — Amazon did this on some Echo, Fire TV and Kindle devices
+      this year. That is why the “Lowest ever” badge only appears where a source
+      says the price is the lowest tracked, and why small cuts are labelled small.
+      Prices move fast in Black Friday week: always confirm the price at checkout.</p>
+    </div>
+  </section>
+
+  <section class="sources" aria-labelledby="sources-h">
+    <h2 id="sources-h">Where the prices come from</h2>
+    <p>Retailer product pages (Amazon, Best Buy) and these published price checks,
+    all dated 12–25 Nov 2026 and re-verified on 27 Nov 2026:</p>
+    <ul>
+      <li>MacRumors — AirPods Pro 3 at $149 (23 Nov)</li>
+      <li>The Gadgeteer — Black Friday OLED TV deals (20 Nov)</li>
+      <li>BeastCompare — Black Friday TV deals, record lows (15 Nov)</li>
+      <li>Engadget — TV deals before Black Friday (14 Nov)</li>
+      <li>TechResearchOnline — Black Friday sales 2026 (25 Nov)</li>
+      <li>Yahoo Shopping via QuantoSei / The Gadgets Central — early deals (22–25 Nov)</li>
+      <li>Popular Science — 200+ Amazon Black Friday deals (24 Nov)</li>
+      <li>9to5Google — deals: SmartTag 3, Chromebook, Walmart early Black Friday (12 Nov)</li>
+      <li>Ultragamerz — 40 tech and gaming deals under $300 (24 Nov)</li>
+      <li>BeeBulletin — Black Friday deals 2026 by store (24 Nov)</li>
+      <li>20SomethingFinance — best Amazon Black Friday deals (25 Nov)</li>
+      <li>ComicBook — Amazon’s Black Friday Week sale (19 Nov)</li>
+      <li>Southern Savers — Black Friday electronics deals (23 Nov)</li>
+      <li>Miami Herald deals — Amazon Black Friday gifts (19 Nov)</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>DealLens is an independent deal finder built for make.fun’s
+    “Build the best real Black Friday deal finder” bounty. It is not affiliated
+    with Amazon, Best Buy, Walmart, or any brand named here. Prices were checked
+    27 Nov 2026 and can change or sell out — verify at checkout. All design,
+    text and icons on this page are original.</p>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
