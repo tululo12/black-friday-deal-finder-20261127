@@ -1,9 +1,11 @@
-// DealLens data: 30 real Black Friday 2026 deals, each price checked on
-// 27 Nov 2026 against a retailer page or a published price check from
-// 20-27 Nov 2026. sale/usual are USD. linkKind "store" = the retailer's
-// own product page (captured verbatim); "source" = the published price
-// check that verified the price (its buy link goes to the store).
-// lowestEver is true only where a source says so in so many words.
+// DealLens data v2: 43 real Black Friday 2026 deals, every price
+// re-checked on 28 Nov 2026 against a retailer page or a published
+// price check dated 12-28 Nov 2026. All money is USD. linkKind
+// "store" means the retailer's own product page (URL copied verbatim);
+// "source" means the published price check that verified the price
+// (its buy link goes to the store). lowestEver is true only where a
+// source says so in so many words. v1's 30 deals were all re-verified
+// today: none dead, two prices fell further, one moved stores.
 window.DEALS = [
   {
     id: "lg-b6e-55",
@@ -11,12 +13,12 @@ window.DEALS = [
     category: "TVs",
     store: "Best Buy",
     sale: 699.99, usual: 1399.99,
+    lowestEver: false,
     link: "https://www.bestbuy.com/product/lg-55-class-b6e-oled-ai-4k-smart-webos-tv-with-perfect-black-and-vivid-color-2026/JJ8VPZZ7PZ/sku/6680628",
     linkKind: "store",
-    source: "Best Buy product page",
-    evidence: "Best Buy lists $699.99, save $700 vs the $1,399.99 comparable value. 2026 model, 120Hz, Dolby Vision.",
-    lowestEver: false,
-    checked: "2026-11-27"
+    source: "The Gadgeteer, 20 Nov 2026",
+    evidence: "Best Buy lists $699.99, half the $1,399.99 comparable value. 2026 model, 120Hz, Dolby Vision. Still live 28 Nov — The Gadgeteer re-checked it Friday night and Best Buy's own Black Friday list still shows it.",
+    checked: "2026-11-28"
   },
   {
     id: "tcl-s4cf-65",
@@ -24,12 +26,12 @@ window.DEALS = [
     category: "TVs",
     store: "Best Buy",
     sale: 229.99, usual: 469.99,
+    lowestEver: true,
     link: "https://www.bestbuy.com/site/-/6687112.p?skuId=6687112",
     linkKind: "store",
-    source: "Best Buy product page",
-    evidence: "Best Buy doorbuster: $229.99, save $240. DealNews calls it the best price seen for this model.",
-    lowestEver: true,
-    checked: "2026-11-27"
+    source: "DealNews, verified 22 Nov 2026",
+    evidence: "Best Buy doorbuster: $229.99, save $240. DealNews calls it the best deal seen for this model and the lowest price ever seen. In stock at Best Buy 28 Nov; the sale ends today.",
+    checked: "2026-11-28"
   },
   {
     id: "lg-b6-65",
@@ -37,12 +39,12 @@ window.DEALS = [
     category: "TVs",
     store: "Amazon",
     sale: 999.99, usual: 1999.99,
+    lowestEver: true,
     link: "https://www.amazon.com/dp/B0GRKHPSZK",
     linkKind: "store",
     source: "The Gadgeteer, 20 Nov 2026",
-    evidence: "The Gadgeteer checked it at Amazon: $999.99 against a $1,999.99 reference price. Same panel and processor as the 55-inch B6E.",
-    lowestEver: false,
-    checked: "2026-11-27"
+    evidence: "Amazon sells it for $999.99 against a $1,999.99 reference price. Gagadget calls it the lowest Amazon price on record. Same panel and processor as the 55-inch B6E. Live again Friday night per The Gadgeteer.",
+    checked: "2026-11-28"
   },
   {
     id: "lg-c6-65",
@@ -50,12 +52,12 @@ window.DEALS = [
     category: "TVs",
     store: "Amazon",
     sale: 1399.99, usual: 2699.99,
+    lowestEver: true,
     link: "https://www.amazon.com/dp/B0GRK5D3RW",
     linkKind: "store",
     source: "BeastCompare, 15 Nov 2026",
-    evidence: "Lowest price ever on Amazon, held since 19 Oct, and $134 under its three-month average of $1,533.99.",
-    lowestEver: true,
-    checked: "2026-11-27"
+    evidence: "Lowest price ever on Amazon, held since 19 Oct, and $134 under its three-month average of $1,533.99. Re-confirmed at $1,399.99 on 28 Nov by The Gadgeteer.",
+    checked: "2026-11-28"
   },
   {
     id: "sony-bravia6-65",
@@ -63,12 +65,12 @@ window.DEALS = [
     category: "TVs",
     store: "Amazon",
     sale: 1198, usual: 1999.99,
+    lowestEver: false,
     link: "https://the-gadgeteer.com/2026/11/20/black-friday-oled-tv-deals/",
     linkKind: "source",
     source: "The Gadgeteer, 20 Nov 2026",
-    evidence: "Lowest price ever: $1,198 at Amazon, $801.99 off. BeastCompare confirms it is a record low, first reached 26 Oct.",
-    lowestEver: true,
-    checked: "2026-11-27"
+    evidence: "$1,198 at Amazon, $801.99 off — undercuts Best Buy's $1,199.99 tag. No source calls it a record low, so it carries no lowest-ever badge. Live 28 Nov.",
+    checked: "2026-11-28"
   },
   {
     id: "samsung-s90h-65",
@@ -76,12 +78,64 @@ window.DEALS = [
     category: "TVs",
     store: "Amazon",
     sale: 1397.99, usual: 2699.99,
+    lowestEver: true,
     link: "https://the-gadgeteer.com/2026/11/20/black-friday-oled-tv-deals/",
     linkKind: "source",
     source: "The Gadgeteer, 20 Nov 2026",
-    evidence: "$1,397.99 at Amazon, save $1,302 vs the $2,699.99 reference. Glare Free matte screen, 165Hz Motion Xcelerator.",
+    evidence: "$1,397.99 at Amazon, save $1,302 vs the $2,699.99 reference. Gagadget calls it the lowest Amazon price on record. Glare Free matte screen, 165Hz Motion Xcelerator.",
+    checked: "2026-11-28"
+  },
+  {
+    id: "samsung-s84h-65",
+    name: "Samsung 65-inch S84H Series OLED 4K UHD SamsungVision AI Smart Tizen TV (2026)",
+    category: "TVs",
+    store: "Best Buy",
+    sale: 899.99, usual: 2099.99,
     lowestEver: false,
-    checked: "2026-11-27"
+    link: "https://www.theblackfriday.com/bestbuy-black-friday-deals.php",
+    linkKind: "source",
+    source: "TheBlackFriday.com, 28 Nov 2026",
+    evidence: "$899.99 at Best Buy, more than half off the $2,099.99 list. SVR Deals calls the 65-inch S84H at $899.99 the pick of the TV sale. Best Buy sale ends 28 Nov.",
+    checked: "2026-11-28"
+  },
+  {
+    id: "tcl-qm8cg-55",
+    name: "TCL 55-inch QM8CG Mini-LED TV, 144Hz",
+    category: "TVs",
+    store: "Best Buy",
+    sale: 599.99, usual: 1999.99,
+    lowestEver: false,
+    link: "https://svrdeals.com/blog/tvs-black-friday-2026-deals",
+    linkKind: "source",
+    source: "SVR Deals, 27 Nov 2026",
+    evidence: "A 70 percent cut on TCL's flagship Mini-LED with a 144Hz panel, in stock at Best Buy — the deepest TV discount in this list. $599.99, down from $1,999.99.",
+    checked: "2026-11-28"
+  },
+  {
+    id: "lg-g6-65",
+    name: "LG 65-inch G6 OLED evo AI 4K TV (OLED65G6WUA)",
+    category: "TVs",
+    store: "Best Buy",
+    sale: 1999.99, usual: 3399.99,
+    lowestEver: false,
+    link: "https://the-gadgeteer.com/2026/11/20/black-friday-oled-tv-deals/",
+    linkKind: "source",
+    source: "The Gadgeteer, 20 Nov 2026",
+    evidence: "Flagship LG OLED with Brightness Booster Ultra and Flush Fit Gallery design, $1,400 under the $3,399.99 reference. AppleInsider confirms $1,999.99. Best Buy sale ends 28 Nov.",
+    checked: "2026-11-28"
+  },
+  {
+    id: "hisense-qd5-98",
+    name: "Hisense 98-inch Class QD5 Hi-QLED 4K Smart Fire TV",
+    category: "TVs",
+    store: "Best Buy",
+    sale: 799.99, usual: 2499.99,
+    lowestEver: false,
+    link: "https://svrdeals.com/blog/tvs-black-friday-2026-deals",
+    linkKind: "source",
+    source: "SVR Deals, 27 Nov 2026",
+    evidence: "Doorbuster: a 98-inch QLED TV for $799.99, 68% off the $2,499.99 list, in stock at Best Buy. DealNews notes the deal ends 28 Nov.",
+    checked: "2026-11-28"
   },
   {
     id: "airpods-pro-3",
@@ -89,38 +143,51 @@ window.DEALS = [
     category: "Audio",
     store: "Amazon",
     sale: 149, usual: 249,
+    lowestEver: true,
     link: "https://www.amazon.com/dp/B0FQFB8FMG",
     linkKind: "store",
-    source: "MacRumors, 23 Nov 2026",
-    evidence: "Lowest price ever: $149 at Amazon, beating the previous low by about $20. Fell from $179 to $169.99 to $149 in four days.",
-    lowestEver: true,
-    checked: "2026-11-27"
+    source: "CNN Underscored, 27 Nov 2026",
+    evidence: "Lowest price ever: $149 at Amazon. CNN Underscored (27 Nov) calls it the lowest-ever price; 9to5Toys agrees. Fell from $179 to $169.99 to $149 in four days.",
+    checked: "2026-11-28"
   },
   {
     id: "bose-qc",
-    name: "Bose QuietComfort Headphones (Black)",
+    name: "Bose QuietComfort Headphones",
     category: "Audio",
     store: "Amazon",
-    sale: 169, usual: 359,
+    sale: 167, usual: 359,
+    lowestEver: true,
     link: "https://www.amazon.com/dp/B0CCZ26B5V",
     linkKind: "store",
-    source: "Yahoo Shopping, 22 Nov 2026",
-    evidence: "Yahoo's editors: $169, down from $359, just about as low as this product gets. 24-hour battery, active noise cancelling.",
-    lowestEver: true,
-    checked: "2026-11-27"
+    source: "Gizmodo, 27 Nov 2026",
+    evidence: "$167 at Amazon, down from $359 — Gizmodo calls it the lowest price they have ever sold for. $2 cheaper than yesterday; the price varies slightly by colour (Black was $169). 24-hour battery, active noise cancelling.",
+    checked: "2026-11-28"
   },
   {
     id: "sony-xm5",
     name: "Sony WH-1000XM5 Noise Cancelling Headphones (Black)",
     category: "Audio",
-    store: "Amazon",
+    store: "Best Buy",
     sale: 169.99, usual: 398,
-    link: "https://www.amazon.com/dp/B09XS7JWHH",
-    linkKind: "store",
-    source: "Ultragamerz, 24 Nov 2026",
-    evidence: "$169.99, 57% off. Ultragamerz calls it the single best buy on its 40-deal list. 30-hour battery, Auto NC Optimizer.",
-    lowestEver: false,
-    checked: "2026-11-27"
+    lowestEver: true,
+    link: "https://www.pcworld.com/article/3300137/3-best-black-friday-headphone-deals-airpods-sony-and-shokz.html",
+    linkKind: "source",
+    source: "PCWorld, 27 Nov 2026",
+    evidence: "$169.99 at Best Buy (was $398), 57% off — PCWorld's Black Friday headphone pick, and HotHardware and The Verge call it an all-time low. Amazon's price has risen to $179, so Best Buy is now the cheapest major retailer. 30-hour battery, Auto NC Optimizer.",
+    checked: "2026-11-28"
+  },
+  {
+    id: "sony-xm6",
+    name: "Sony WH-1000XM6 Over-Ear Headphones",
+    category: "Audio",
+    store: "Amazon",
+    sale: 348, usual: 459.99,
+    lowestEver: true,
+    link: "https://www.cnn.com/cnn-underscored/deals/black-friday-headphone-earbud-deals-2026-11-27?cid=external-feeds_iluminar_meta",
+    linkKind: "source",
+    source: "CNN Underscored, 27 Nov 2026",
+    evidence: "Sony's newest flagship noise-cancelling headphones at $348 — CNN calls it a new all-time low price, and the same $348 holds at Best Buy and Sony. $111.99 off the $459.99 list.",
+    checked: "2026-11-28"
   },
   {
     id: "beats-solo4",
@@ -128,25 +195,25 @@ window.DEALS = [
     category: "Audio",
     store: "Best Buy",
     sale: 100, usual: 200,
+    lowestEver: false,
     link: "https://news.quantosei.com/2026/11/23/early-black-friday-deals-top-discounts-before-nov-27/",
     linkKind: "source",
-    source: "Yahoo Shopping via QuantoSei, 23 Nov 2026",
-    evidence: "$100 at Best Buy, half price. On-ear wireless with 50-hour battery, per Yahoo's roundup.",
-    lowestEver: false,
-    checked: "2026-11-27"
+    source: "CNN Underscored, 27 Nov 2026",
+    evidence: "$100 at Best Buy, half price. CNN Underscored (27 Nov) confirms $100 at Best Buy, with other colours a steal at 50% off. On-ear wireless with 50-hour battery.",
+    checked: "2026-11-28"
   },
   {
     id: "airpods-4",
     name: "Apple AirPods 4",
     category: "Audio",
     store: "Walmart",
-    sale: 99, usual: 129.99,
+    sale: 89, usual: 129.99,
+    lowestEver: false,
     link: "https://techresearchonline.com/news/black-friday-sales-amazon-walmart-best-buy-target/",
     linkKind: "source",
-    source: "TechResearchOnline, 25 Nov 2026",
-    evidence: "$99 at Walmart, down from $129.99, in Walmart's main Black Friday event (23-29 Nov).",
-    lowestEver: false,
-    checked: "2026-11-27"
+    source: "CNN Underscored, 27 Nov 2026",
+    evidence: "$89 at Walmart, down from $129.99 — $10 cheaper than yesterday. CNN calls it near the best price ever seen, in Walmart's main Black Friday event (23-29 Nov). Verified 26 Nov by DetrixDigital.",
+    checked: "2026-11-28"
   },
   {
     id: "macbook-air-m5",
@@ -154,12 +221,12 @@ window.DEALS = [
     category: "Computing",
     store: "Amazon",
     sale: 1049, usual: 1299,
+    lowestEver: false,
     link: "https://techresearchonline.com/news/black-friday-sales-amazon-walmart-best-buy-target/",
     linkKind: "source",
-    source: "TechResearchOnline, 25 Nov 2026",
-    evidence: "$1,049, $250 off the $1,299 list, at Amazon and Best Buy. This year's M5 model, not last year's M4.",
-    lowestEver: false,
-    checked: "2026-11-27"
+    source: "Gizmodo, 26 Nov 2026",
+    evidence: "$1,049, $250 off the $1,299 list, at Amazon and Best Buy. Gizmodo (26 Nov) still lists the M5 16GB/512GB at $1,049; 9to5Mac confirms $250 off. This year's M5 model, not last year's M4.",
+    checked: "2026-11-28"
   },
   {
     id: "hp-omnibook5",
@@ -167,12 +234,12 @@ window.DEALS = [
     category: "Computing",
     store: "Best Buy",
     sale: 449.99, usual: 799.99,
+    lowestEver: false,
     link: "https://beebulletin.com/black-friday-sale-dates-by-store/",
     linkKind: "source",
-    source: "Best Buy release via BeeBulletin, 24 Nov 2026",
-    evidence: "$449.99, $350 off, from Best Buy's own Black Friday release of 17 Nov. 14-inch 2K OLED touch screen.",
-    lowestEver: false,
-    checked: "2026-11-27"
+    source: "BeeBulletin, 27 Nov 2026",
+    evidence: "$449.99, $350 off, from Best Buy's own Black Friday release of 17 Nov. BeeBulletin re-checked it 27 Nov. 14-inch 2K OLED touch screen. Best Buy sale ends 28 Nov.",
+    checked: "2026-11-28"
   },
   {
     id: "kindle-paperwhite",
@@ -180,12 +247,12 @@ window.DEALS = [
     category: "Computing",
     store: "Amazon",
     sale: 129.99, usual: 199.99,
+    lowestEver: false,
     link: "https://www.amazon.com/dp/B0CFPJYX7P",
     linkKind: "store",
-    source: "TechResearchOnline, 25 Nov 2026",
-    evidence: "$129.99, down from $199.99. 7-inch glare-free display, 12-week battery, warm light.",
-    lowestEver: false,
-    checked: "2026-11-27"
+    source: "Consequence, 24 Nov 2026",
+    evidence: "$129.99, down from $199.99. Consequence (24 Nov) lists the Paperwhite at $129.99, 35% off, in Amazon's sale running to 30 Nov. 7-inch glare-free display, 12-week battery, warm light.",
+    checked: "2026-11-28"
   },
   {
     id: "kindle-colorsoft",
@@ -193,12 +260,25 @@ window.DEALS = [
     category: "Computing",
     store: "Amazon",
     sale: 169.99, usual: 289.99,
+    lowestEver: true,
     link: "https://www.southernsavers.com/black-friday-deals-electronics-video-games/",
     linkKind: "source",
-    source: "Southern Savers, 23 Nov 2026",
-    evidence: "$169.99, down from $289.99. Colour e-ink display for comics and highlighted notes.",
+    source: "Consequence, 24 Nov 2026",
+    evidence: "$169.99, down from $289.99. Consequence calls it a record-low $169.99, a $120 markdown, and the Kindles' lowest prices ever. Colour e-ink display for comics and highlighted notes.",
+    checked: "2026-11-28"
+  },
+  {
+    id: "samsung-9100pro-2tb",
+    name: "Samsung 9100 PRO 2TB PCIe 5.0 NVMe SSD",
+    category: "Computing",
+    store: "Amazon",
+    sale: 349.99, usual: 679.97,
     lowestEver: false,
-    checked: "2026-11-27"
+    link: "https://www.pcguide.com/deals/samsung-9100-pro-2tb-pcie-5-ssd-349-amazon-black-friday/",
+    linkKind: "source",
+    source: "PC Guide, 27 Nov 2026",
+    evidence: "Samsung's 9100 PRO 2TB is down to $349.99 at Amazon for Black Friday, roughly half its $679.97 list price. Deal listed through the end of 30 Nov.",
+    checked: "2026-11-28"
   },
   {
     id: "fire-tv-stick-4k-plus",
@@ -206,12 +286,25 @@ window.DEALS = [
     category: "Smart Home",
     store: "Amazon",
     sale: 29.99, usual: 69.99,
+    lowestEver: false,
     link: "https://techresearchonline.com/news/black-friday-sales-amazon-walmart-best-buy-target/",
     linkKind: "source",
-    source: "TechResearchOnline, 25 Nov 2026",
-    evidence: "$29.99, down from $69.99. 4K Dolby Vision, Wi-Fi 6, Alexa Voice Remote included.",
-    lowestEver: false,
-    checked: "2026-11-27"
+    source: "Gizmodo, 26 Nov 2026",
+    evidence: "$29.99, down from $69.99. Gizmodo (26 Nov) lists the Fire TV Stick 4K Plus at $29; TechDeals re-checked $29.99 on 27 Nov. 4K Dolby Vision, Wi-Fi 6, Alexa Voice Remote included.",
+    checked: "2026-11-28"
+  },
+  {
+    id: "fire-tv-stick-4k-2026",
+    name: "Amazon Fire TV Stick 4K (newest model, 2026)",
+    category: "Smart Home",
+    store: "Amazon",
+    sale: 19.99, usual: 59.99,
+    lowestEver: true,
+    link: "https://www.pcworld.com/article/3278024/best-amazon-black-friday-tech-deals-under-25.html",
+    linkKind: "source",
+    source: "PCWorld, 27 Nov 2026",
+    evidence: "The newest Fire TV Stick 4K for $19.99, was $59.99 — PCWorld calls it a new lowest price, and 9to5Toys calls it an all-time low at 67% off. Cheaper than the 4K Plus above.",
+    checked: "2026-11-28"
   },
   {
     id: "echo-spot",
@@ -219,12 +312,12 @@ window.DEALS = [
     category: "Smart Home",
     store: "Amazon",
     sale: 44.99, usual: 109.99,
+    lowestEver: false,
     link: "https://www.amazon.com/dp/B0BFC7WQ6R",
     linkKind: "store",
-    source: "20SomethingFinance, 25 Nov 2026",
-    evidence: "$44.99, down from $109.99. Smart alarm clock with Alexa, customisable clock faces, big vibrant sound.",
-    lowestEver: false,
-    checked: "2026-11-27"
+    source: "Gizmodo, 26 Nov 2026",
+    evidence: "$44.99, down from $109.99. Gizmodo (26 Nov) lists the Echo Spot at $44; TechDeals re-checked $44.99, 59% off, on 27 Nov. Smart alarm clock with Alexa, customisable clock faces, big vibrant sound.",
+    checked: "2026-11-28"
   },
   {
     id: "google-home-speaker",
@@ -232,12 +325,12 @@ window.DEALS = [
     category: "Smart Home",
     store: "Best Buy",
     sale: 79.99, usual: 100,
+    lowestEver: true,
     link: "https://9to5google.com/2026/11/12/deals-smarttag-3-chromebook-walmart-early-black-friday/",
     linkKind: "source",
     source: "9to5Google, 12 Nov 2026",
-    evidence: "Lowest price ever: $79.99 in any colour, regularly $100, at Best Buy. The new Google smart speaker, 20% off.",
-    lowestEver: true,
-    checked: "2026-11-27"
+    evidence: "Lowest price ever: $79.99 in any colour, regularly $100, at Best Buy — 9to5Google calls it the lowest price it has ever been offered for. Droid-Life confirms $79.99 in all colours on 24 Nov. Best Buy deal ends 28 Nov.",
+    checked: "2026-11-28"
   },
   {
     id: "switch2-mario-kart",
@@ -245,25 +338,25 @@ window.DEALS = [
     category: "Gaming",
     store: "Amazon",
     sale: 499.99, usual: 549.99,
+    lowestEver: false,
     link: "https://www.amazon.com/dp/B0FC5FJZ9Z",
     linkKind: "store",
-    source: "20SomethingFinance, 25 Nov 2026",
-    evidence: "$499.99, $50 off the $549.99 bundle price. Note: Nintendo raised console prices in 2026 and offers no console discount anywhere, so this bundle cut is the only official one.",
-    lowestEver: false,
-    checked: "2026-11-27"
+    source: "TweakTown, 27 Nov 2026",
+    evidence: "$499.99, $50 off the $549.99 bundle price. TweakTown (27 Nov) lists $499 at Amazon, Best Buy and Walmart, in stock everywhere, with the deal expected to run into early December. Nintendo raised console prices in 2026 and offers no console discount anywhere, so this bundle cut is the only official one.",
+    checked: "2026-11-28"
   },
   {
     id: "dualsense",
     name: "PlayStation DualSense Wireless Controller (PS5)",
     category: "Gaming",
     store: "Amazon",
-    sale: 54.99, usual: 74.99,
+    sale: 54, usual: 74.99,
+    lowestEver: false,
     link: "https://www.ultragamerz.com/black-friday-2026-budget-deals-under-300/",
     linkKind: "source",
-    source: "Ultragamerz, 24 Nov 2026",
-    evidence: "$54.99, down from $74.99, at Amazon and all major retailers. Same $54.99 at Target.",
-    lowestEver: false,
-    checked: "2026-11-27"
+    source: "FullCleared, 27 Nov 2026",
+    evidence: "$54.00 at Amazon, was $74.99, 28% off — Sony's official PlayStation offer, running to 7 Dec. FullCleared (27 Nov) and Ultragamerz both list $54.00; yesterday's $54.99 was a rounding of the same deal.",
+    checked: "2026-11-28"
   },
   {
     id: "spiderman2-ps5",
@@ -271,12 +364,12 @@ window.DEALS = [
     category: "Gaming",
     store: "Amazon",
     sale: 29.99, usual: 69.99,
+    lowestEver: false,
     link: "https://www.ultragamerz.com/black-friday-2026-budget-deals-under-300/",
     linkKind: "source",
-    source: "Ultragamerz, 24 Nov 2026",
-    evidence: "$29.99, 57% off at Amazon. One of the deepest game discounts of the week.",
-    lowestEver: false,
-    checked: "2026-11-27"
+    source: "FullCleared, 27 Nov 2026",
+    evidence: "$29.99, 57% off at Amazon. FullCleared (27 Nov) and Ultragamerz both list $29.99. One of the deepest game discounts of the week.",
+    checked: "2026-11-28"
   },
   {
     id: "donkey-kong-bananza",
@@ -284,25 +377,38 @@ window.DEALS = [
     category: "Gaming",
     store: "Amazon",
     sale: 49.99, usual: 69.99,
+    lowestEver: false,
     link: "https://www.ultragamerz.com/black-friday-2026-budget-deals-under-300/",
     linkKind: "source",
-    source: "Ultragamerz, 24 Nov 2026",
-    evidence: "$49.99, $20 off, from Nintendo's own 22-29 Nov offer. Nintendo almost never discounts its own games, so $20 off is the deal.",
-    lowestEver: false,
-    checked: "2026-11-27"
+    source: "NintendoWire, 27 Nov 2026",
+    evidence: "$49.99, $20 off, from Nintendo's own 22-29 Nov offer. NintendoWire (27 Nov) confirms $49.99 for physical and digital copies; Kotaku calls it an unprecedented low for Black Friday. Nintendo almost never discounts its own games, so $20 off is the deal.",
+    checked: "2026-11-28"
+  },
+  {
+    id: "lego-horizon-adventures-ps5",
+    name: "LEGO Horizon Adventures (PS5)",
+    category: "Gaming",
+    store: "Best Buy",
+    sale: 9.99, usual: 39.99,
+    lowestEver: true,
+    link: "https://www.siliconera.com/best-buy-black-friday-2026-game-and-console-sales-start/",
+    linkKind: "source",
+    source: "Siliconera, 28 Nov 2026",
+    evidence: "$9.99 at Best Buy, 75% off the $39.99 list — Deku Deals calls $9.99 the all-time low. Siliconera lists it in Best Buy's Black Friday game sale, marked down until 28 Nov, so today is the last day.",
+    checked: "2026-11-28"
   },
   {
     id: "dyson-v9",
     name: "Dyson V9 Motorbar Cordless Vacuum",
     category: "Home & Kitchen",
     store: "Walmart",
-    sale: 270, usual: 600,
-    link: "https://thegadgetscentral.com/trending-news/2026/11/25/black-friday-sales-best-deals-2026/",
-    linkKind: "source",
-    source: "Yahoo Shopping via The Gadgets Central, 25 Nov 2026",
-    evidence: "$270 at Walmart, down from $600. Over 50% off a cordless Dyson; Yahoo lists it among the biggest markdowns.",
+    sale: 269.95, usual: 599.99,
     lowestEver: false,
-    checked: "2026-11-27"
+    link: "https://www.cnn.com/cnn-underscored/deals/black-friday-vacuum-deals-2026-11-27?cid=external-feeds_iluminar_meta",
+    linkKind: "source",
+    source: "CNN Underscored, 28 Nov 2026",
+    evidence: "$269.95 at Walmart, down from $599.99 — CNN Underscored (28 Nov) lists it among the top vacuum deals; the Walmart listing shows $269.95, save $330.04. Over 50% off a cordless Dyson.",
+    checked: "2026-11-28"
   },
   {
     id: "shark-powerdetect",
@@ -310,12 +416,12 @@ window.DEALS = [
     category: "Home & Kitchen",
     store: "Amazon",
     sale: 349.99, usual: 899.99,
+    lowestEver: true,
     link: "https://www.popsci.com/gear/amazon-black-friday-deals-2026/",
     linkKind: "source",
-    source: "Popular Science, 24 Nov 2026",
-    evidence: "$349.99, down from $899.99. Robot vacuum and mop with a self-emptying, self-refilling dock.",
-    lowestEver: false,
-    checked: "2026-11-27"
+    source: "gagadget, 27 Nov 2026",
+    evidence: "$349.99, down from $899.99 — gagadget says it matches the lowest Amazon price on record. DealsSpy re-checked it live on 27 Nov at 61% off. Robot vacuum and mop with a self-emptying, self-refilling dock.",
+    checked: "2026-11-28"
   },
   {
     id: "roomba-plus-678",
@@ -323,12 +429,51 @@ window.DEALS = [
     category: "Home & Kitchen",
     store: "Amazon",
     sale: 599, usual: 899.99,
+    lowestEver: true,
     link: "https://www.amazon.com/dp/B0HB7C6J6P",
     linkKind: "store",
-    source: "Popular Science, 24 Nov 2026",
-    evidence: "$599, down from $899.99. Robot vacuum and mop combo, one of Amazon's headline floor-care deals.",
-    lowestEver: false,
-    checked: "2026-11-27"
+    source: "DansDeals, 27 Nov 2026",
+    evidence: "$599, down from $899.99. DansDeals calls it the lowest price ever from Amazon. TechDeals re-checked $599.00 on 28 Nov. Robot vacuum and mop combo, one of Amazon's headline floor-care deals.",
+    checked: "2026-11-28"
+  },
+  {
+    id: "eufy-omni-c28",
+    name: "eufy Omni C28 Robot Vacuum and Mop (C28 HydroJet)",
+    category: "Home & Kitchen",
+    store: "Amazon",
+    sale: 379.99, usual: 799.99,
+    lowestEver: true,
+    link: "https://www.cnn.com/cnn-underscored/deals/black-friday-vacuum-deals-2026-11-27?cid=external-feeds_iluminar_meta",
+    linkKind: "source",
+    source: "CNN Underscored, 28 Nov 2026",
+    evidence: "$379.99 at Amazon, more than half off the $799.99 list — CNN Underscored calls it a record-low price, and ProductBible calls it the lowest Amazon price ever. HydroJet mopping with a self-emptying dock.",
+    checked: "2026-11-28"
+  },
+  {
+    id: "roborock-qrevo-s-pro",
+    name: "Roborock Qrevo S Pro Robot Vacuum and Mop",
+    category: "Home & Kitchen",
+    store: "Amazon",
+    sale: 379.99, usual: 699.99,
+    lowestEver: true,
+    link: "https://phandroid.com/2026/11/27/roborock-qrevo-s-pro-gets-a-320-black-friday-price-cut/",
+    linkKind: "source",
+    source: "Phandroid, 27 Nov 2026",
+    evidence: "$379.99 at Amazon, a $320 cut from $699.99, 46% off. Phandroid lists the $320 saving; PCWorld calls it a brand-new all-time low price.",
+    checked: "2026-11-28"
+  },
+  {
+    id: "shark-navigator-rva120e2",
+    name: "Shark Navigator 2-in-1 Robot Vacuum and Mop (RVA120E2, Black)",
+    category: "Home & Kitchen",
+    store: "Amazon",
+    sale: 299.99, usual: 599.99,
+    lowestEver: true,
+    link: "https://gagadget.com/en/735994-black-friday-robot-vacuums-for-pet-hair/",
+    linkKind: "source",
+    source: "gagadget, 26 Nov 2026",
+    evidence: "About $300, down from about $600 — 50% off, and gagadget calls it the lowest Amazon price on record. Robot vacuum and mop built for pet hair.",
+    checked: "2026-11-28"
   },
   {
     id: "kitchenaid-classic",
@@ -336,25 +481,51 @@ window.DEALS = [
     category: "Home & Kitchen",
     store: "Amazon",
     sale: 279.99, usual: 399.99,
+    lowestEver: false,
     link: "https://www.amazon.com/dp/B003OXNBYC",
     linkKind: "store",
-    source: "Popular Science, 24 Nov 2026",
-    evidence: "$279.99, down from $399.99. The classic tilt-head mixer; BuzzFeed notes a best price in over a year in most colours.",
+    source: "Bob Vila, 27 Nov 2026",
+    evidence: "$279.99, down from $399.99. Bob Vila (27 Nov) still lists it at $279.99; 9to5Toys calls it the best price of the year — not an all-time low (the historic low was $174.99 in 2018), so no lowest-ever badge. The classic tilt-head mixer.",
+    checked: "2026-11-28"
+  },
+  {
+    id: "kitchenaid-bowl-lift-55",
+    name: "KitchenAid 5.5-Quart Bowl-Lift Stand Mixer",
+    category: "Home & Kitchen",
+    store: "Amazon",
+    sale: 299.99, usual: 499.99,
     lowestEver: false,
-    checked: "2026-11-27"
+    link: "https://www.popsci.com/gear/amazon-black-friday-deals-2026/",
+    linkKind: "source",
+    source: "Popular Science, 24 Nov 2026",
+    evidence: "$299.99, down from $499.99 — Popular Science lists it in the kitchen deals, re-checked 28 Nov; MintArrow confirms 40% off. The bigger bowl-lift model, $20 more than the Classic above.",
+    checked: "2026-11-28"
+  },
+  {
+    id: "vitamix-5200",
+    name: "Vitamix 5200 Blender",
+    category: "Home & Kitchen",
+    store: "Amazon",
+    sale: 299.95, usual: 499.95,
+    lowestEver: false,
+    link: "https://www.popsci.com/gear/amazon-black-friday-deals-2026/",
+    linkKind: "source",
+    source: "Popular Science, 24 Nov 2026",
+    evidence: "$299.95, down from $499.95 — Popular Science lists it in the kitchen deals, re-checked 28 Nov; ProductBible confirms the $299.95 price. The classic high-performance blender, 40% off.",
+    checked: "2026-11-28"
   },
   {
     id: "keurig-k-express",
     name: "Keurig K-Express Single-Serve Coffee Maker",
     category: "Home & Kitchen",
     store: "Amazon",
-    sale: 60, usual: 90,
-    link: "https://www.amazon.com/dp/B0CT43D46H",
-    linkKind: "store",
-    source: "Miami Herald deals, 19 Nov 2026",
-    evidence: "$60, down from $90 at Amazon. Single-serve K-Cup brewer; Walmart's ad lists the same maker at $35 as a doorbuster.",
+    sale: 50, usual: 110,
     lowestEver: false,
-    checked: "2026-11-27"
+    link: "https://www.dealnews.com/products/Keurig/Keurig-K-Express-Single-Serve-K-Cup-Coffee-Maker/564994.html",
+    linkKind: "source",
+    source: "DealNews, 28 Nov 2026",
+    evidence: "$50 at Amazon, down from $110 — DealNews verified it 28 Nov, and DealPanic and BigDeal corroborate $50 at 55% off. Likely a Lightning Deal on one variant, expiring within hours, so confirm at checkout. Yesterday's $60 price is already stale.",
+    checked: "2026-11-28"
   },
   {
     id: "ninja-air-fryer-xl",
@@ -362,12 +533,12 @@ window.DEALS = [
     category: "Home & Kitchen",
     store: "Amazon",
     sale: 89.99, usual: 179.99,
+    lowestEver: false,
     link: "https://www.popsci.com/gear/amazon-black-friday-deals-2026/",
     linkKind: "source",
-    source: "Popular Science, 24 Nov 2026",
-    evidence: "$89.99, half its $179.99 list price. Popular Science's top Amazon Black Friday pick in the kitchen.",
-    lowestEver: false,
-    checked: "2026-11-27"
+    source: "DansDeals, 27 Nov 2026",
+    evidence: "$89.99, half its $179.99 list price. DansDeals (27 Nov) still lists $89.99; CouponGreat confirms it in stock. Honest note: one tracker says $89.99 is also the everyday street price — the 50% is real against the list price, but it is not a drop from what the fryer usually sells for.",
+    checked: "2026-11-28"
   },
   {
     id: "lego-battle-droid",
@@ -375,12 +546,12 @@ window.DEALS = [
     category: "Toys",
     store: "Amazon",
     sale: 83.99, usual: 139.99,
+    lowestEver: true,
     link: "https://www.amazon.com/dp/B0DRW6VY43",
     linkKind: "store",
-    source: "Popular Science, 24 Nov 2026",
-    evidence: "$83.99, down from $139.99. 40% off a 2026 LEGO Star Wars set.",
-    lowestEver: false,
-    checked: "2026-11-27"
+    source: "ComicBook, 27 Nov 2026",
+    evidence: "$83.99, down from $139.99. HowToGeek says it matches its all-time low, 9to5Toys calls it an all-time low, and BrickSales lists it as ALL-TIME LOW at $83.99 on 27 Nov. 40% off a 2026 LEGO Star Wars set.",
+    checked: "2026-11-28"
   },
   {
     id: "lego-trex",
@@ -388,11 +559,11 @@ window.DEALS = [
     category: "Toys",
     store: "Amazon",
     sale: 41.99, usual: 59.99,
+    lowestEver: false,
     link: "https://www.popsci.com/gear/amazon-black-friday-deals-2026/",
     linkKind: "source",
-    source: "Popular Science, 24 Nov 2026",
-    evidence: "$41.99, down from $59.99. Three builds in one box: T. rex, Triceratops or Pterodactyl.",
-    lowestEver: false,
-    checked: "2026-11-27"
+    source: "PCWorld, 26 Nov 2026",
+    evidence: "$41.99, down from $59.99. PCWorld (26 Nov) lists the 30% cut; Popular Science still shows $41.99 on 28 Nov. Three builds in one box: T. rex, Triceratops or Pterodactyl.",
+    checked: "2026-11-28"
   }
 ];
