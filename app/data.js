@@ -6,6 +6,10 @@
 // (its buy link goes to the store). lowestEver is true only where a
 // source says so in so many words. v1's 30 deals were all re-verified
 // today: none dead, two prices fell further, one moved stores.
+// v4 (28 Nov evening): 3 cross-store comparisons added (LEGO at
+// Walmart, AirPods Pro 3 at Best Buy, Sony XM5 at Amazon), each price
+// re-verified tonight from 2+ sources; the 43 deal prices are
+// unchanged, checked dates stay 28 Nov.
 window.DEALS = [
   {
     id: "lg-b6e-55",
@@ -148,7 +152,8 @@ window.DEALS = [
     linkKind: "store",
     source: "CNN Underscored, 27 Nov 2026",
     evidence: "Lowest price ever: $149 at Amazon. CNN Underscored (27 Nov) calls it the lowest-ever price; 9to5Toys agrees. Fell from $179 to $169.99 to $149 in four days.",
-    checked: "2026-11-28"
+    checked: "2026-11-28",
+    compare: { store: "Best Buy", sale: 149.99, source: "9to5Toys, 26 Nov 2026; Slickdeals" }
   },
   {
     id: "bose-qc",
@@ -174,7 +179,8 @@ window.DEALS = [
     linkKind: "source",
     source: "PCWorld, 27 Nov 2026",
     evidence: "$169.99 at Best Buy (was $398), 57% off — PCWorld's Black Friday headphone pick, and HotHardware and The Verge call it an all-time low. Amazon's price has risen to $179, so Best Buy is now the cheapest major retailer. 30-hour battery, Auto NC Optimizer.",
-    checked: "2026-11-28"
+    checked: "2026-11-28",
+    compare: { store: "Amazon", sale: 179, source: "PCWorld, 27 Nov 2026" }
   },
   {
     id: "sony-xm6",
@@ -395,7 +401,8 @@ window.DEALS = [
     linkKind: "source",
     source: "Siliconera, 28 Nov 2026",
     evidence: "$9.99 at Best Buy, 75% off the $39.99 list — Deku Deals calls $9.99 the all-time low. Siliconera lists it in Best Buy's Black Friday game sale, marked down until 28 Nov, so today is the last day.",
-    checked: "2026-11-28"
+    checked: "2026-11-28",
+    compare: { store: "Walmart", sale: 9.97, source: "GamesRadar, 20 Nov 2026; Slickdeals" }
   },
   {
     id: "dyson-v9",

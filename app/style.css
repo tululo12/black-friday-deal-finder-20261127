@@ -27,7 +27,7 @@ a { color: var(--ember-dark); }
 button { font: inherit; cursor: pointer; }
 
 /* Top bar */
-.topbar { background: var(--ink); color: #f7efdd; }
+.topbar { background: var(--ink); color: #f7efdd; position: sticky; top: 0; z-index: 10; }
 .topbar-in {
   display: flex; flex-wrap: wrap; gap: 6px 24px;
   align-items: baseline; justify-content: space-between;
@@ -114,6 +114,7 @@ button { font: inherit; cursor: pointer; }
 }
 .cat[aria-pressed="true"] { background: var(--ember); border-color: var(--ember); color: #fff; }
 .count { color: var(--ink-soft); font-size: 14px; margin: 8px 0 14px; }
+.finder-sum { margin: 0 0 14px; font-size: 15px; font-weight: 700; color: var(--ink); }
 .empty { background: var(--card); border: 1px dashed var(--line); border-radius: var(--radius); padding: 20px; }
 .empty button { background: none; border: none; color: var(--ember-dark); font-weight: 700; text-decoration: underline; padding: 0; }
 
@@ -146,6 +147,11 @@ button { font: inherit; cursor: pointer; }
 .verdict.strong { background: var(--amber-bg); color: #7a5b00; }
 .verdict.decent { background: var(--blue-bg); color: #274b7a; }
 .verdict.modest { background: #eee7d6; color: var(--ink-soft); }
+.compare {
+  margin: 10px 0 0; padding: 8px 10px; font-size: 13px; line-height: 1.45;
+  background: #eef4ea; border-left: 3px solid var(--green); border-radius: 0 8px 8px 0;
+  color: var(--ink);
+}
 .why { margin: 10px 0 0; font-size: 13.5px; color: var(--ink-soft); }
 .meta { margin: 8px 0 0; font-size: 12.5px; color: var(--ink-soft); }
 .card .cta { margin-top: auto; padding-top: 14px; }

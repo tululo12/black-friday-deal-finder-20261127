@@ -39,6 +39,8 @@
   $("stat-save").textContent = money(Math.round(totalSave));
   $("stat-avg").textContent = avgPct + "%";
   $("stat-lowest").textContent = String(lowestCount);
+  var fsEl = $("finder-sum");
+  if (fsEl) fsEl.textContent = DEALS.length + " deals · " + money(Math.round(totalSave)) + " you could save · " + avgPct + "% average discount · " + lowestCount + " lowest-ever prices";
 
   // ---- top picks: lowest-ever first, then biggest %, then biggest saving ----
   var picks = DEALS.slice().sort(function (a, b) {
@@ -212,6 +214,16 @@
     var badge = document.createElement("span");
     badge.className = "verdict " + v.cls;
     badge.textContent = v.label;
+    var cmp = null;
+    if (d.compare) {
+      var diff = Math.abs(d.sale - d.compare.sale);
+      var verdict2 = d.compare.sale < d.sale
+        ? d.compare.store + " has it " + money(diff) + " cheaper"
+        : "cheapest here — " + d.compare.store + " lists it " + money(diff) + " higher";
+      cmp = document.createElement("p");
+      cmp.className = "compare";
+      cmp.textContent = "Same product at " + d.compare.store + ": " + money(d.compare.sale) + " (" + d.compare.source + ") — " + verdict2 + ".";
+    }
     var why = document.createElement("p");
     why.className = "why";
     why.textContent = d.evidence;
@@ -237,6 +249,7 @@
     art.appendChild(h);
     art.appendChild(prow);
     art.appendChild(badge);
+    if (cmp) art.appendChild(cmp);
     art.appendChild(why);
     art.appendChild(meta);
     art.appendChild(cta);
