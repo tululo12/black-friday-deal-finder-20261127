@@ -4,8 +4,8 @@
 [![rank](https://make.fun/badge/black-friday-deal-finder-01/tululo12/black-friday-deal-finder-20261127/rank.svg)](https://make.fun/bounty/black-friday-deal-finder-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=black-friday-deal-finder-01)
 [![reward](https://make.fun/badge/black-friday-deal-finder-01/tululo12/black-friday-deal-finder-20261127/reward.svg)](https://make.fun/bounty/black-friday-deal-finder-01?utm_source=github&utm_medium=readme&utm_campaign=black-friday-deal-finder-01)
 
-DealLens — a static Black Friday deal finder of 30 real deals, each price-checked
-on 27 November 2026, with a verdict on whether the discount is genuine. Search
+DealLens — a static Black Friday deal finder of 43 real deals, each price-checked
+on 28 November 2026, with a verdict on whether the discount is genuine. Search
 and filter by category, store and discount; every card names its store, sale
 price, usual price, saving, evidence and source. No network requests, no build
 step: the site runs from static files.
